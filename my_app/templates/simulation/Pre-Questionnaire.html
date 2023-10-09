@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pre-Simulation Questionnaire</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+
+{% block content %}
+<body class="pre-quest">
+    <div class="questionnaire">
+        <h1 class="mb-5 text-center">Pre-Simulation Questionnaire</h1>
+
+        <form action="{{ url_for('simulation.submit_pre_simulation') }}" method="POST" class="bg-white border p-5 rounded shadow-sm">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                <label for="age" class="font-weight-bold">Question 1: What is your age?</label>
+                <input type="number" id="age" name="age" min="1" max="85" required class="form-control">
+            </div>
+
+            <div class="form-group">
+                <p>Question 2: What is your gender?<br>
+                (As per your national identity document)</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="training" class="font-weight-bold">Question 3: Have you ever received any form of cyber awareness safety training or learning?</label>
+                <br>
+                <select id="training" name="training" required class="form-control">
+                    <option value="">Please select a value</option>
+                    <option value="yes">Yes, I have been trained / had learning about it.</option>
+                    <option value="no">No, I have never been trained / had any learning about it.</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="knowledge" class="font-weight-bold">Question 4: Do you know what phishing is?</label>
+                <br>
+                <select id="knowledge" name="knowledge" required class="form-control">
+                    <option value="">Please select a value</option>
+                    <option value="yes">Yes, I do know what phishing is.</option>
+                    <option value="no">No, I do not know what phishing is.</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message" class="font-weight-bold">Question 5: Have you ever received a message, email, or any other means that you suspected was a phishing attempt?</label>
+                <br>
+                <select id="message" name="message" required class="form-control">
+                    <option value="">Please select a value</option>
+                    <option value="yes">Yes, I have received a suspected phishing attempt.</option>
+                    <option value="no">No, I have not received a suspected phishing attempt.</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Question 6: How confidently could you distinguish between genuine and phishing emails on a scale of 1-5 (1=Low Confidence, 5=Very strong confidence)?<br></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rating" id="rating1" value="1" required>
+                    <label class="form-check-label" for="rating1">Low confidence</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rating" id="rating2" value="2" required>
+                    <label class="form-check-label" for="rating2">Developing confidence</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rating" id="rating3" value="3" required>
+                    <label class="form-check-label" for="rating3">Fairly confident</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rating" id="rating4" value="4" required>
+                    <label class="form-check-label" for="rating4">Strong confidence</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rating" id="rating5" value="5" required>
+                    <label class="form-check-label" for="rating5">Very strong confidence</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="actions" class="font-weight-bold">Question 7: How would you act if you received an email and suspected it to be malicious?</label>
+                <br>
+                <select id="actions" name="actions" required class="form-control">
+                    <option value="">Please select a value</option>
+                    <option value="option1">Open the email to check the content</option>
+                    <option value="option2">Delete the email immediately</option>
+                    <option value="option3">Report the email</option>
+                    <option value="option4">Unsure</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="consequences" class="font-weight-bold">Question 8: Do you fully understand the potential consequences of being a victim of a phishing attempt, such as clicking on a URL website link from an unknown sender?</label>
+                <br>
+                <select id="consequences" name="consequences" required class="form-control">
+                    <option value="">Please select a value</option>
+                    <option value="option1">Yes fully understand</option>
+                    <option value="option2">Partly understand</option>
+                    <option value="option3">Do not fully understand</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary btn-lg">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            let age = document.querySelector('#age');
+            if (!age.value || age.value <= 0 || age.value > 85) {
+                event.preventDefault();
+                alert('Please enter a valid age between 1 and 85.');
+            }
+
+            let gender = getCheckedValue('gender');
+            if (!gender) {
+                event.preventDefault();
+                alert('Please select a gender.');
+            }
+
+            let training = document.querySelector('#training');
+            if (!training.value) {
+                event.preventDefault();
+                alert('Please select an option for question 3.');
+            }
+
+            let knowledge = document.querySelector('#knowledge');
+            if (!knowledge.value) {
+                event.preventDefault();
+                alert('Please select an option for question 4.');
+            }
+
+            let message = document.querySelector('#message');
+            if (!message.value) {
+                event.preventDefault();
+                alert('Please select an option for question 5.');
+            }
+
+            let rating = getCheckedValue('rating');
+            if (!rating) {
+                event.preventDefault();
+                alert('Please select a rating for question 6.');
+            }
+
+            let actions = document.querySelector('#actions');
+            if (!actions.value) {
+                event.preventDefault();
+                alert('Please select an option for question 7.');
+            }
+
+            let consequences = document.querySelector('#consequences');
+            if (!consequences.value) {
+                event.preventDefault();
+                alert('Please select an option for question 8.');
+            }
+        });
+
+        function getCheckedValue(name) {
+            let radios = document.getElementsByName(name);
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    return radios[i].value;
+                }
+            }
+            return "";
+        }
+    </script>
+{% endblock %}
+</body>
+</html>
