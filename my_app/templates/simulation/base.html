@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research Project: Phishing Simulation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+    <section class="hero is-link">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a href="{{ url_for('simulation.base') }}" class="navbar-item">
+                                Home
+                            </a>
+                            {% if current_user.is_authenticated %}
+                                <a href="{{ url_for('simulation.submit_pre_simulation') }}" class="navbar-item">
+                                    1. Pre-Simulation
+                                </a>
+                                <a href="{{ url_for('simulation.phishing_simulation') }}" class="navbar-item">
+                                    2. Phishing Simulation
+                                </a>
+                                <a href="{{ url_for('simulation.submit_post_simulation') }}" class="navbar-item">
+                                    3. Post-Simulation
+                                </a>
+                                <a href="{{ url_for('simulation.final_page') }}" class="navbar-item">
+                                    4. Final Page: Tips
+                                </a>
+                                <form action="{{ url_for('auth.logout') }}" method="POST">
+                                    {{ form.hidden_tag() }}
+                                    
+                                    <button type="submit" style="background: none; border: none; color: #ffffff; cursor: pointer;">Logout</button>
+                                </form>
+                            {% elif not current_user.is_authenticated %}
+                                <a href="{{ url_for('simulation.login') }}" class="navbar-item">
+                                    Login
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="hero-body">
+                <!-- Instructions for the user -->
+                <div class="title">
+                    <br>
+                    <h1 class="title has-text-info">Welcome to the Phishing Simulation!</h1>
+                    <div class="instructions">
+                    <p> This phishing simulation is for research and training purposes.<br>
+                        <br>
+                        This is not a live event and all information does not relate to real companies or emails.</p>
+                        <br>
+                    <p> Please read the instructions below before starting the simulation.</p>
+                    </div>
+                    <br>
+                    <h2 class="subtitle has-text-success">Instructions</h2>
+                    
+                    <div class="instructions">
+                        <div class="textjustify">
+                    <ol><li class="list-items">Step 1: Click on 'Pre-Simulation' to complete the questionnaire.</li> 
+                        <li class="list-items">Step 2: Click on 'Phishing Simulation' to complete the phishing simulation. You will be presented with a series of emails and asked to identify whether they are genuine or not. You can provide a reason for your decision.</li>
+                        <li class="list-items">Step 3: Click on 'Post-Simulation' to complete a reflection questionnaire.</li>  
+                        <li class="list-items">Step 4: You will redirected to a Phishing Awareness tips page showing reminders to keep yourself safe from phishing emails and be a better digital citizen for society.</li> </ol>
+                        </div>           
+                    </div>
+                    <div class="instructions">
+                        <div class="textcenter">
+                        <p>
+                        Thank you for your participation!<br>
+                        <br>Your efforts will support further research in this topic area.
+                        </p>
+                        </div>
+                    </div> 
+                </div>
+                {% block content %}
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <ul class=flashes>
+                                {% for message in messages %}
+                                <li>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endwith %}
+                {% endblock %}
+            </div>
+        </div>
+        <div class="hero-foot">
+        </div>
+    </section>
+</body>
+
+</html>
