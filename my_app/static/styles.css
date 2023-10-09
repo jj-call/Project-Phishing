@@ -1,0 +1,219 @@
+/* For base.html */
+.navbar {
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+  }
+  
+  body {
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  
+  h1.title.has-text-info {
+    color: rgba(255, 115, 0, 0.903) !important;
+    font-size: 32px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .border {
+    background-image: url('');
+    background-size: cover;
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #888888;
+  }
+  
+  .has-text-success {
+    color: #4CAF50 !important;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .textjustify {
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: sans-serif; 
+  }
+  
+  .textcenter {
+    text-align: center;
+    font-weight: bold;
+    text-justify: inter-word;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: sans-serif; 
+  }
+  
+  .instructions {
+    font-weight: normal;
+    font-size: 20px;
+    font-family: sans-serif; 
+  }
+  
+  .list-items {
+    padding-left: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px; 
+  }
+  
+  /* For Phishing-Simultion.html */
+  .email-wrapper {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .email {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .email h2 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .email h2 span {
+      font-weight: normal;
+      color: #666;
+  }
+  
+  .email p {
+    margin-bottom: 20px;
+  }
+  
+  .btn-link {
+      display: inline-block;
+      background-color: #4CAF50;
+      border: none;
+      color: rgb(12, 1, 221);
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+  
+  /* For index.html, register.html, base.html, and final_page.html */
+  
+  .container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+  }
+  
+  /* For login.html, register.html, and index.html */
+  
+  
+  .header {
+    color: white;
+    margin-bottom: 30px;
+  }
+  
+  /* For login.html */
+  .word {
+    color: white;
+  }
+  
+  /* For register.html, Pre-Questionnaire.html, and Post-Questionnaire.html */
+  
+  input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+  }
+  
+  /* For Pre-Questionnaire.html and Post-Questionnaire.html */
+  .questionnaire {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* For Pre-Questionnaire.html */
+  .pre-quest {
+    background: linear-gradient(to right, #73C8A9, #8ea01c);
+  }
+  
+  .pre-quest h1 {
+    color: #fff; 
+  }
+  
+  /* For Post-Questionnaire.html */
+  .post-quest {
+    background: linear-gradient(to right, #AA4B6B, #6363ef); 
+  }
+  
+  .post-quest h1 {
+    color: #fff; 
+  }
+  
+  /* For final_page.html
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+  }
+  header {
+      background-color: #50b3a2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+  }
+  section {
+      padding: 20px;
+  }
+  .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+  }
+  .tip-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .tip-box img {
+      max-width: 100%;
+  }
+  h2, h3 {
+      color: #333;
+  } */
+  
+  /* For removing bullets from unordered list */
+  .no-list-style {
+    list-style: none;
+  }
+  
+  select {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+  }
+  
