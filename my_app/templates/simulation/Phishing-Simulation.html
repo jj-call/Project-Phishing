@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Simulation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-J8ZpuMbUDEDt3ouZDO8UoZ3Q3ZC/XkcOkbNt6k7gfPn4t6BUk+eDP6NR4yPz1F1b" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+     <form method="post" action="/simulation/phishing_simulation" id="yourFormId" class="email-wrapper">
+        <input type="hidden" name="csrf_token" value="{{ form.csrf_token._value() }}">
+        <input type="hidden" name="challenge_id" value="{{ challenge.id }}">
+        <input type="hidden" id="startTime" name="start_time" value="">
+        <input type="hidden" id="endTime" name="end_time" value="">
+        <input type="hidden" id="timeTaken" name="time_taken" value="">
+        <input type="hidden" id="clickedLink" name="clicked_link" value="False">
+    <div class="email">
+        
+        <h2>From: {{ sender }}</h2>
+        <h2>Subject: <span>{{ subject }}</span></h2>
+        <p>{{ content|safe }}</p>
+        <button class="btn-link" type="button" name="clicked_button">Click this Link</button>
+        <h3>Your Decision:</h3>
+        <label>Phishing:</label> {{ form.phishing }}
+        <label>Confidence:</label> {{ form.confidence }}
+        <label>Reason:</label> {{ form.reason }}
+        <br>
+        {{ form.submit }}
+    </div>
+     </form>
+<script>
+    window.onload = function() {
+        const startTime = new Date().toISOString();
+        document.getElementById('startTime').value = startTime;
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        let now = new Date();
+        document.getElementById("start_time").value = now.toISOString();
+    });
+    
+    $(document).ready(function() {
+        const $form = $('#yourFormId');
+        const csrfToken = $('input[name="csrf_token"]').val();
+    
+        // Initialize start time
+        var currentStartTime = new Date().getTime();
+        $('#startTime').val(currentStartTime);
+    
+        function computeDuration() {
+            const endTime = new Date().getTime();
+            $('#endTime').val(endTime);
+            const duration = endTime - parseInt($('#startTime').val());
+            $('#timeTaken').val(duration);
+        }
+    
+        $form.on('submit', function(e) {
+            e.preventDefault();
+    
+            // Compute duration
+            computeDuration();
+    
+            $.ajax({
+                url: "/simulation/phishing_simulation",
+                type: "POST",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                data: $(this).serialize(),
+                success: function(response) {
+                    if (response.success) {
+                        if (response.redirect) {
+                            window.location.href = response.redirect;
+                        } else {
+                            loadNextChallenge();
+                        }
+                    } else {
+                        alert('There was a problem submitting your response: ' + response.error);
+                    }
+                },
+                error: function() {
+                    alert('There was a problem connecting to the server. Please try again.');
+                }
+            });
+        });
+    
+        $("button[name='clicked_button']").on('click', function(e) {
+            e.preventDefault();
+            $(this).prop("disabled", true);
+            $('#clickedLink').val('True');
+            console.log("Current value of clickedLink:", $('#clickedLink').val());
+            alert("You clicked the link!");
+        });
+    });
+</script>
+    
+       
