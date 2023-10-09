@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Post-Simulation Questionnaire</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+
+
+{% block content %}
+<body class="post-quest">
+    <div class="questionnaire">
+        <h1 class="mb-5 text-center">Post-Simulation Questionnaire</h1>
+        <form action="{{ url_for('simulation.submit_post_simulation') }}"  method="POST" class="bg-white border p-5 rounded shadow-sm">
+            {{ form.hidden_tag() }}
+
+            <br>
+            <div class="form-group">
+                <label for="message" class="font-weight-bold">Question 1: After completing the phishing simulation, has this increased your awareness and understanding of phishing?</label>
+                <br>
+                <select id="message" name="awareness" required class="form-control">
+                    <option value="">Please select a value</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <br>   
+            <div class="form-group">
+                <p>Question 2: How confidently do you think you could distinguish between genuine and phishing emails in the simulation on a scale of 1-5 (1=Low Confidence, 5=Very strong confidence)?<br></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ratings" id="ratings1" value="1" required>
+                    <label class="form-check-label" for="ratings1">Low confidence</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ratings" id="ratings2" value="2" required>
+                    <label class="form-check-label" for="ratings2">Developing confidence</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ratings" id="ratings3" value="3" required>
+                    <label class="form-check-label" for="ratings3">Fairly confident</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ratings" id="ratings4" value="4" required>
+                    <label class="form-check-label" for="ratings4">Strong confidence</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ratings" id="ratings5" value="5" required>
+                    <label class="form-check-label" for="ratings5">Very strong confidence</label>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="helpful" class="font-weight-bold">Question 3: From the phishing simulation, what did you find the most helpful?</label>
+                <br>
+                <select id="helpful" name="helpful" required class="form-control">
+                    <option value="">Please select a value</option>
+                    <option value="option1">Identifying potential phishing emails</option>
+                    <option value="option2">Handling and managing the emails</option>
+                    <option value="option3">Realising potential consequences</option>
+                    <option value="option4">It was not that helpful</option>
+                </select>
+            </div>
+            <br>
+             <div class="form-group">
+                <label for="act" class="font-weight-bold">Question 4: How would you now act if you received an email and suspected it to be malicious?</label>
+                <br>
+                <select id="act" name="act" required class="form-control">
+                    <option value="">Please select a value</option>
+                    <option value="option1">Open the email to check the content</option>
+                    <option value="option2">Delete the email immediately</option>
+                    <option value="option3">Report the email</option>
+                    <option value="option4">Unsure</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="behaviour" class="font-weight-bold">Question 5: After completing the simulation, will your online behaviour change? (verifying sender details, cautious of URL clicking)</label>
+                <br>
+                <select id="behaviour" name="behaviour" required class="form-control">
+                    <option value="">Please select a value</option>
+                    <option value="option1">Yes, I will be more attentive to what I click on or view.</option>
+                    <option value="option2">Perhaps, sometimes I will try to be more attentive and cautious.</option>
+                    <option value="option3">No, I will continue my normal behaviours; the simulation had no influence.</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <p>Question 6: On a scale of 1-5 (1=Not effective at all, 5=Extremely effective), how effective was the simulation in educating you on phishing?<br></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="effective" id="effective1" value="1" required>
+                    <label class="form-check-label" for="effective1">Not effective at all</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="effective" id="effective2" value="2" required>
+                    <label class="form-check-label" for="effective2">Somewhat effective</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="effective" id="effective3" value="3" required>
+                    <label class="form-check-label" for="effective3">Moderately effective</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="effective" id="effective4" value="4" required>
+                    <label class="form-check-label" for="effective4">Very effective</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="effective" id="effective5" value="5" required>
+                    <label class="form-check-label" for="effective5">Extremely effective</label>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="life" class="font-weight-bold">Question 9: Would you be able to apply the information learned from this exercise to real life?</label>
+                <br>
+                <select id="life" name="life" required class="form-control">
+                    <option value="">Please select a value</option>
+                    <option value="option1">Yes</option>
+                    <option value="option2">No</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="recommend" class="font-weight-bold">Question 10: Would you recommend this phishing exercise to others to support their cyber awareness of phishing?</label>
+                <br>
+                <select id="recommend" name="recommend" required class="form-control">
+                    <option value="">Please select a value</option>
+                    <option value="option1">Yes</option>
+                    <option value="option2">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary btn-lg">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            
+            let awareness = document.querySelector('#message');
+            if (!awareness.value) {
+                event.preventDefault();
+                alert('Please select an option for message question.');
+            }
+
+            let ratings = getCheckedValue('ratings');
+            if (!ratings) {
+                event.preventDefault();
+                alert('Please select a rating.');
+            }
+
+            let helpful = document.querySelector('#helpful');
+            if (!helpful.value) {
+                event.preventDefault();
+                alert('Please select an option for helpful question.');
+            }
+
+            let act = document.querySelector('#act');
+            if (!act.value) {
+                event.preventDefault();
+                alert('Please select an option for act question.');
+            }
+
+            let behaviour = document.querySelector('#behaviour');
+            if (!behaviour.value) {
+                event.preventDefault();
+                alert('Please select an option for behaviour question.');
+            }
+
+            let effective = getCheckedValue('effective');
+            if (!effective) {
+                event.preventDefault();
+                alert('Please select an effectiveness rating.');
+            }
+            
+            let life = document.querySelector('#life');
+            if (!life.value) {
+                event.preventDefault();
+                alert('Please select an option for life question.');
+            }
+            
+            let recommend = document.querySelector('#recommend');
+            if (!recommend.value) {
+                event.preventDefault();
+                alert('Please select an option for recommend question.');
+            }
+        });
+
+        function getCheckedValue(name) {
+            let radios = document.getElementsByName(name);
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    return radios[i].value;
+                }
+            }
+            return "";
+        }
+    </script>
+</body>
+{% endblock %}
+</html>
