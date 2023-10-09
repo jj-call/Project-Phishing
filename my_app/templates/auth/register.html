@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Register</h1>
+        </div>
+        <br>
+        <form method="POST" action="{{ url_for('auth.register') }}">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="Enter Your Username" class="form-control" required autocomplete="username">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Create a Secure Password" class="form-control" required autocomplete="new-password">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input id="confirm_password" name="confirm_password" type="password" placeholder="Confirm Your Password" class="form-control" required autocomplete="new-password">
+            </div>
+            <br>
+            <input type="submit" class="btn btn-primary" value="Sign Up">
+        </form>
+        <br>
+        <p>Already have an account? <a href="{{ url_for('auth.login') }}">Sign in here</a></p>
+
+    </div>
+    <div class="flash-messages">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-warning">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
