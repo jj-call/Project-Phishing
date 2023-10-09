@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <main>
+        <section class="login-section">
+            <header class="header">
+                <h1 class="word">Login</h1>
+            </header>
+            <form method="POST" action="{{ url_for('auth.login') }}">
+                {{ form.hidden_tag() }}
+                <div class="field">
+                    <label for="username">Username</label>
+                    <input class="input is-large" id="username" name="username" type="text" placeholder="Your username" autofocus required autocomplete="username">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input class="input is-large" id="password" name="password" type="password" placeholder="Your password" required autocomplete="current-password">
+                </div>
+                <br>
+                <div class="field">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <br>
+                <button class="button is-block is-info is-large is-fullwidth">Login</button>
+            </form>
+            <br>
+            <br>
+            <a href="{{ url_for('auth.register') }}">Back to the Registration page</a>
+        </section>
+    </main>
+</body>
+</html>
