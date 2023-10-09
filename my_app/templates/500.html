@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Internal Server Error</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <div style="text-align: center; padding: 50px;">
+        <h1>500 - Internal Server Error</h1>
+        <p>Oops, something went wrong. Please try again later.</p>
+        <a href="{{ url_for('simulation.base') }}">Go back to homepage</a>
+    </div>
+</body>
+</html>
