@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phishing Awareness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: rgb(34,193,195);
+            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+        }
+        header {
+            background-color: #50b3a2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .tip-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .tip-box img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        .text-content {
+            font-weight: normal;
+            font-size: 16px;
+            font-family: sans-serif; 
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .score-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .score-section h1, .score-section h2 {
+            margin: 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- new section for the score and grade -->
+    <section class="score-section">
+        <h1>Your Phishing Simulation score: <span style="color:blue;">{{ user_score }} %</span></h1>
+        <br>
+        <h2>Level achieved: <span style="color:green;">{{ grade_level }}</span></h2>
+    </section>
+
+    <header>
+        <h1>Phishing awareness: Hints and tips</h1>
+    </header>
+    
+    <section class="container">
+        <div class="tip-box">
+            <h2>Tip 1: Check the Email Address</h2>
+            <img src="{{ url_for("static", filename="images/winner.png") }}" alt="Check the email address">
+            <br>
+            <p><b>Phishing email:</b><br>
+                <br>
+                There are plenty of issues with this email.<br>
+                The sender's email address is not genuine and not an education domain.<br>
+                The email is not personalised and addressed to 'Dear Student'.<br>
+                The email style must be consistent with the school's usual communications, and the language must also be consistent with the school's usual communications.<br>
+                The email offers unusual prizes with the offer deemed too good to be true.<br>
+                The email asks the student to click a link for contact or download an attachment; both can be used maliciously to compromise security.<br>
+                There is also the urgency placed on the student to act quickly to claim the prize.<br>
+                The sign-off from the Principal looks okay, but the website address differs from the email domain, which could raise suspicion.<br>
+                <br>
+                <i>Always look at the sender's email address. If it looks suspicious, it's likely a phishing attempt.</i></p>
+        </div>
+        
+        <div class="tip-box">
+            <h2>Tip 2: Traceback your behaviour</h2>
+            <img src="{{ url_for("static", filename="images/reactivate_account.png") }}" alt="Traceback your behaviour">
+            <br>
+            <p><b>Phishing email:</b><br>
+                <br>
+                The email sender has a suspect address with numbers and 'info-seek'.<br>
+                No personalisation or even address to a student with only 'Dear User'. <br>
+                Activity is suggested to have occurred on your account, which has caused it to be locked. Consider your online behaviours and see if this could be genuine.<br>
+                <br>
+                <i>The link of 'letmein' is a clear sign of intent, whilst most phishing emails are not as easy to spot. Hover your cursor over the link before clicking.</i></p>
+        </div>
+        
+        <div class="tip-box">
+            <h2>Tip 3: Look for domains</h2>
+            <img src="{{ url_for("static", filename="images/Print_credit.png") }}" alt="Look for domains">
+            <br>
+            <p><b>Genuine email:</b><br>
+                <br>
+                Whilst there is a 'no reply' which can raise concern, we see this is a system-generated message.<br>
+                The education domain 'edu.com' is indicated in the email, which suggests the sender comes from a valid education organisation that has gone through the verification process. <br>
+                There is a link to click; however, alternatively, the student could visit the office to top up printing credit.<br>
+                Whilst there is no personalisation to the student, an account number may be associated with the student's account.<br>
+                <br>
+                <i>Check the senders' domain and verification information could not have been accessed by someone else to protect your details.</i></p>
+        </div>
+
+        <div class="tip-box">
+            <h2>Tip 4: Be Cautious with Links</h2>
+            <img src="{{ url_for("static", filename="images/library_book.png") }}" alt="Be cautious with links">
+            <br>
+            <p><b>Phishing email:</b><br>
+                <br>
+                <div class="text-content">
+                The email sender has 'no reply' suggested you cannot query the overdue book loan.<br>
+                There is no personalisation with 'Dear Student' and no mention of the book title or how long it was overdue.<br>
+                There is no capitalisation of 'your' and a threatening intent with the risk of an additional fine, perhaps suggesting you already owe.<br>
+                The instruction is to directly click the link, which could compromise your personal details or be subject to further malicious activities.<br>
+                </div>
+                <br>
+                <i>Hover over links without clicking to see where they lead. If the URL looks strange, don't click!</i></p>
+        </div>
+
+        <div class="tip-box">
+            <h2>Tip 5: Careful with unknown senders</h2>
+            <img src="{{ url_for("static", filename="images/future_hope.png") }}" alt="Be careful with unknown senders">
+            <br>
+            <p><b>Phishing email:</b><br>
+            <br>
+            <div class="text-content">
+            Here, we see numerous concerns...<br>
+            <br>
+            An unknown sender offering money to support future schooling may seem appealing to many people. The email has many spelling, punctuation and grammatical errors.<br>
+            A significant sum of money is offered based on 'criteria and information off the school'. How did the sender receive such information?<br>
+            This also offers a different method of sending a 'treasurer' a text message to potentially capture your details.<br>
+            </div>
+            <br>
+            <i>Be careful of unknown senders and be cautious if you see poor spelling, punctuation and grammar.</i></p>
+        </div>
+
+        <div class="tip-box">
+            <h2>Tip 6: Review the email for consistency</h2>
+            <img src="{{ url_for("static", filename="images/achievement.png") }}" alt="Consistency">
+            <br>
+            <p><b>Genuine email:</b><br>
+            <br>
+            <div class="text-content">
+            This is more likely a genuine email.<br>
+            <br>
+            The Principal is using an address with a .edu domain.<br>
+            The offer of $250hkd for a book coupon seems realistic, and the terminology is consistent with school communications.<br>
+            There is no attempt to click any link or similar, and I have instructed to collect the prize in school, where staff will be aware of the award.<br>
+            </div>
+            <br>
+            <i>The sign-off from the Principal is well presented and consistent with previously sent emails.</i></p>
+        </div>
+    </section>
+
+</body>
+</html>
