@@ -1,0 +1,37 @@
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:2:80: E501 line too long (167 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:3:80: E501 line too long (90 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:18:80: E501 line too long (90 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:20:80: E501 line too long (139 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:26:80: E501 line too long (91 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:28:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:30:80: E501 line too long (86 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:31:80: E501 line too long (112 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:32:80: E501 line too long (209 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:33:80: E501 line too long (171 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:34:80: E501 line too long (205 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:35:80: E501 line too long (217 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:36:80: E501 line too long (228 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:37:80: E501 line too long (196 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:40:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:43:80: E501 line too long (94 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:45:69: W291 trailing whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:46:80: E501 line too long (127 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:47:80: E501 line too long (102 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:50:43: W291 trailing whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:51:80: E501 line too long (113 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:52:80: E501 line too long (111 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:56:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:59:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:61:80: E501 line too long (106 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:62:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:65:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:66:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:68:80: E501 line too long (109 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:69:80: E501 line too long (219 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:70:80: E501 line too long (267 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:71:80: E501 line too long (197 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:72:80: E501 line too long (325 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:73:80: E501 line too long (224 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:74:80: E501 line too long (108 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:75:80: E501 line too long (118 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\forms.py:77:1: W391 blank line at end of file

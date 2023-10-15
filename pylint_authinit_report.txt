@@ -1,0 +1,7 @@
+************* Module my_app.auth
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\auth\__init__.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\auth\__init__.py:5:0: C0413: Import "from . import views" should be placed at the top of the module (wrong-import-position)
+
+------------------------------------------------------------------
+Your code has been rated at 3.33/10 (previous run: 3.33/10, +0.00)
+

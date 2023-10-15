@@ -1,0 +1,44 @@
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:7:1: F401 '.config.DevelopmentConfig' imported but unused
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:7:1: F401 '.config.ProductionConfig' imported but unused
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:15:1: F811 redefinition of unused 'db' from line 9
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:18:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:19:1: E303 too many blank lines (3)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:26:1: E302 expected 2 blank lines, found 1
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:28:80: E501 line too long (104 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:37:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:38:1: E302 expected 2 blank lines, found 1
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:40:21: W291 trailing whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:41:13: E117 over-indented (comment)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:42:13: E117 over-indented
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:43:13: E122 continuation line missing indentation or outdented
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:43:80: E501 line too long (492 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:43:490: E231 missing whitespace after ','
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:44:13: E122 continuation line missing indentation or outdented
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:44:80: E501 line too long (301 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:45:13: E122 continuation line missing indentation or outdented
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:45:80: E501 line too long (566 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:45:564: E231 missing whitespace after ','
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:46:13: E122 continuation line missing indentation or outdented
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:46:80: E501 line too long (645 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:46:643: E231 missing whitespace after ','
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:47:13: E122 continuation line missing indentation or outdented
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:47:80: E501 line too long (723 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:48:13: E122 continuation line missing indentation or outdented
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:48:80: E501 line too long (498 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:49:9: E122 continuation line missing indentation or outdented
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:52:80: E501 line too long (143 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:58:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:59:1: E302 expected 2 blank lines, found 1
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:74:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:76:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:77:5: E303 too many blank lines (3)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:80:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:83:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:89:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:90:5: E303 too many blank lines (2)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:92:80: E501 line too long (101 > 79 characters)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:94:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:95:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:96:5: E303 too many blank lines (2)
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:99:1: W293 blank line contains whitespace
+c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\__init__.py:103:1: W391 blank line at end of file
