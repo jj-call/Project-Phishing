@@ -11,3 +11,5 @@ gunicorn.sock
 /my_app.log.1/
 /my_app.log.2/
 /my_app.log.3/
+
+Tests/

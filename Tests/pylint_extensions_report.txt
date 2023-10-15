@@ -1,6 +1,0 @@
-************* Module my_app.extensions
-c:\Users\jj_ca\OneDrive\Documents\GitHub\Project-Phishing\my_app\extensions.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-
------------------------------------
-Your code has been rated at 8.33/10
-
