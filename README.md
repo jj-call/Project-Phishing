@@ -23,7 +23,6 @@ To install please follow these steps:
 git clone https://github.com/jj-call/Project-Phishing.git
 cd Project-Phishing.git
 pipenv install or use
-```
 pip install -r requirements.txt
 
 ## Configuration
