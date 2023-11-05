@@ -12,3 +12,6 @@ env
 /my_app.log.3
 /errorlog.txt
 /Tests
+my_app.log.1
+my_app.log.2
+.gitignore
