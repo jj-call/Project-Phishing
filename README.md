@@ -2,7 +2,7 @@
 Research project - Phishing Simulation Web Application
 
 ## Introduction
-This reposiroty contains a Flask web application designed to simulate phishing and genuine email challenges for educational and training purposes.
+This repository contains a Flask web application designed to simulate phishing and genuine email challenges for educational and training purposes.
 The application provides two questionnaire forms to be completed before and after the simulation. The simulation provides users with six different emails related to a secondary school environment. In each email scenario, users must decide whether the email is genuine, phishing or unsure. They will also be required to rate their confidence (low, medium or high) and have the option to provide a reason for their decisions. Scoring is based on duration of decision making and accuracy of identification of the emails. Following completion of the pre-simulation questionnaire, phishing simulation and post-simulation questionnaire, users are redirected to an overall score and grade level that includes tips to support their learning in cyber awareness.
 
 ## Features
