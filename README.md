@@ -25,7 +25,6 @@ cd Project-Phishing.git
 pipenv install or use
 ```
 pip install -r requirements.txt
-```
 
 ## Configuration
 Create a .env file in the root directory of the project with:
