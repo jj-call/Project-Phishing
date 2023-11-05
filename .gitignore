@@ -6,10 +6,11 @@ env
 .pytest_cache
 /my_app/session_data
 gunicorn.sock
-
+/.idea/
 /my_app.log/
 /my_app.log.1/
 /my_app.log.2/
 /my_app.log.3/
-
+/errorlog.txt
+**/*.log
 Tests/
