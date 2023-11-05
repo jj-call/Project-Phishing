@@ -24,10 +24,11 @@ git clone https://github.com/jj-call/Project-Phishing.git
 cd Project-Phishing.git
 pipenv install or use
 pip install -r requirements.txt
+```
 
 ## Configuration
 Create a .env file in the root directory of the project with:
-
+```
 FLASK_APP=my_app
 FLASK_ENV=development
 DB_USERNAME=root
@@ -36,8 +37,9 @@ DB_NAME=
 SECRET_KEY=
 DB_HOST=localhost
 DB_PORT=3306
+```
 
-Running from Windows from the downloaded directory:
+### Running from Windows from the downloaded directory:
 Change to the downloaded directory
 ```
 .\venv\Scripts\activate
