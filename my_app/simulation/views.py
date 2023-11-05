@@ -149,7 +149,9 @@ def submit_pre_simulation():
         if errors:
             for error in errors:
                 flash(error, "error")
-            return render_template("simulation/Pre-Questionnaire.html", errors=errors)
+            # Pass the form
+            return render_template("simulation/Pre-Questionnaire.html", form=form, errors=errors)
+
 
         # If no errors, process form
         try:
@@ -178,9 +180,9 @@ def submit_pre_simulation():
 
     else:
         # Render the form for GET requests
-        return render_template(
-            "simulation/Pre-Questionnaire.html", form=form, errors=[]
-        )
+        form = PreSimulationResponseForm()
+        return render_template("simulation/Pre-Questionnaire.html", form=form, errors=errors)
+
 
 
 # Route for the phishing simulation
@@ -353,17 +355,25 @@ def link_clicked(challenge_id):
 
 
 @simulation_blueprint.route("/submit_response/<challenge_id>", methods=["POST"])
+@login_required
 def submit_response(challenge_id):
     # User's perception (either "phishing" or "genuine")
     user_perception = request.form.get("perception")
+    if not user_perception:
+        return jsonify({'error': 'No perception provided.'}), 400
 
     # Retrieve the user's ongoing PhishingResponse for the challenge
     response = PhishingResponse.query.filter_by(
         user_id=current_user.id, challenge_id=challenge_id
     ).first()
-    if response:
-        response.phishing = user_perception
-        db.session.commit()
+
+    if not response:
+        return jsonify({'error': 'No existing response for this challenge.'}), 404
+
+    response.phishing = user_perception
+    db.session.commit()
+    return jsonify({'success': 'Response updated successfully.'}), 200
+
 
 
 # Route for the post-simulation questionnaire
